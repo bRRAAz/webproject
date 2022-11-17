@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+:root{
+    --black:#000000;
+    --bg: #0c0717;
+    --medium:#150050;
+    --light:#3f0071;
+    --font-color:#cec7c7;
+    --white:#ffff;
+    --shadow:rgba(201, 164, 212, 0.329);
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Sono', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 500px;
+    width: 400px;
+    border: 2px solid var(--light);
+    border-radius: 8px;    
+    box-shadow: 1px 1px 8px 2px var(--shadow);
+}
+
+.inp-p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inps {
+    width: 270px;
+    height: 40px;
+    background-color: var(--font-color);
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 8px 2px var(--shadow);
+
+}
+.inps::placeholder{
+    font-size: 15px;
+    font-family: 'Sono', sans-serif;
+}
+
+#submit {
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--light);
+    color: var(--white);
+    border: none;
+    font-size: 18px;
+    font-family: 'Sono', sans-serif;
+}
