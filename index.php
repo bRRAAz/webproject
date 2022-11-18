@@ -17,10 +17,11 @@ session_start();
     <main>
         
         <form action="login.php" method="post">
+
             <?php
             if(isset($_SESSION['noemail'])):
             ?>
-            <p>Preencha seu email</p>
+            <p class="erro">Preencha seu email</p>
             <?php
             endif;
             unset($_SESSION['noemail'])
@@ -29,7 +30,7 @@ session_start();
             <?php
             if(isset($_SESSION["nosenha"])):
             ?>
-            <p>Preencha sua senhha</p>
+            <p class="erro">Preencha sua senhha</p>
             <?php
             endif;
             unset($_SESSION["nosenha"]);
@@ -37,12 +38,12 @@ session_start();
             <?php
             if(isset($_SESSION["noexiste"])):
             ?>
-            <p>Email e senha incorretos ou inexistentes!</p>
+            <p class="erro">Email e senha incorretos ou inexistentes!</p>
             <?php
             endif;
             unset($_SESSION["noexiste"]);
             ?>
-            <h1>Acesse sua conta</h1>
+            <h1 class="h1">Acesse sua conta</h1>
             <p class="inp-p">
                 <input class="inps" type="text" name="email" placeholder="Email">
             </p>

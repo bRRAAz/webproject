@@ -19,9 +19,17 @@ session_start();
         
         <form action="cadastrar.php" method="post">
             <?php
+            if(isset($_SESSION['nocad'])):
+            ?>
+            <p class="erro">Por favor, preencha o cadastro completamente</p>
+            <?php
+            endif;
+            unset($_SESSION['nocad'])
+            ?>
+            <?php
             if(isset($_SESSION["usuario_existe"])):
             ?>
-            <p>Usuário existente, Não foi possivel fazer o cadastro</p>
+            <p class="erro">Usuário existente, Não foi possivel fazer o cadastro</p>
             <?php
             endif;
             unset($_SESSION["usuario_existe"])
@@ -29,7 +37,7 @@ session_start();
             <?php
             if(isset($_SESSION["status_cadastro"])):
             ?>
-            <p>Cadastro finalizado com sucesso</p>
+            <p class="erro">Cadastro finalizado com sucesso</p>
             <?php
             endif;
             unset($_SESSION["status_cadastro"])

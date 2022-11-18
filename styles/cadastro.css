@@ -45,13 +45,13 @@ form {
     box-shadow: 1px 1px 8px 2px var(--shadow);
 }
 
-.inp-p {
+.inp-p{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.inps {
+.inps{
     width: 270px;
     height: 40px;
     background-color: var(--font-color);
@@ -66,7 +66,7 @@ form {
     font-family: 'Sono', sans-serif;
 }
 
-#submit {
+#submit{
     width: 270px;
     height: 40px;
     border-radius: 20px;
@@ -75,4 +75,18 @@ form {
     border: none;
     font-size: 18px;
     font-family: 'Sono', sans-serif;
+}
+.erro{
+    position: absolute;
+    top: 30px;
+}
+@media(max-width:500px){
+    form{
+        border: none;
+        box-shadow: none;
+        width: 350px;
+    }
+    .erro{
+        font-size: 12px;
+    }
 }
