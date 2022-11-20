@@ -1,5 +1,5 @@
 # Projeto Web
-Esse projeto foi feito como um trabalho da faculdade de analise e desenvolvimento de sistemas, na matéria de desenvolvimento web, escolhi fazer um CRUD fazendo uma replica de qualquer rede social de postagem
+Esse projeto foi feito como um trabalho da faculdade de analise e desenvolvimento de sistemas, na matéria de desenvolvimento web, escolhi fazer uma replica de qualquer rede social de postagem, utilizando CRUD.
 # Tecnologias Utilizadas
 -PHP<br>
 -JavaScript<br>
