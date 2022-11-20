@@ -24,7 +24,6 @@ body {
     box-sizing: border-box;
     text-decoration: none;
 }
-
 main {
     display: flex;
     flex-direction: column;
@@ -32,7 +31,6 @@ main {
     align-items: center;
     height: 100%;
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -45,29 +43,29 @@ form {
     border-radius: 8px;
     box-shadow: 1px 1px 8px 2px var(--shadow);
 }
-
 .inp-p-index {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .inps{
     width: 270px;
     height: 40px;
-    background-color: var(--font-color);
-    border-radius: 20px;
-    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 2px solid var(--light);
     padding: 10px;
-    box-shadow: 1px 1px 8px 2px var(--shadow);
+    outline: none;
+    color: var(--white)
 }
-
-
-.inps::placeholder {
+.inps:focus{
+    border: 2px solid green;
+}
+.inps::placeholder{
     font-size: 15px;
     font-family: 'Sono', sans-serif;
+    color: white;
 }
-
 #submit {
     width: 270px;
     height: 40px;

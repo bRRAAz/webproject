@@ -19,12 +19,12 @@ session_start();
         
         <form action="cadastrar.php" method="post">
             <?php
-            if(isset($_SESSION['nocad'])):
+            if(isset($_SESSION["em_branco"])):
             ?>
-            <p class="erro">Por favor, preencha o cadastro completamente</p>
+            <p class="erro">Preencha todos os campos</p>
             <?php
             endif;
-            unset($_SESSION['nocad'])
+            unset($_SESSION["em_branco"]);
             ?>
             <?php
             if(isset($_SESSION["usuario_existe"])):

@@ -1,5 +1,8 @@
 <?php
 include('protect.php');
+include('conexao.php');
+$buscar_post = "SELECT * FROM postagem ORDER BY id DESC;";
+$query_post = mysqli_query($mysqli, $buscar_post);
 ?>
 
 <!DOCTYPE html>
@@ -13,31 +16,27 @@ include('protect.php');
 </head>
 <body>
     <header>
-        <section class="nav-bar">
-            <p><?php echo strtoupper($_SESSION['nome']);?></p>
-            <p><a id="sair" href="logout.php">Sair</a></p>
+        <div class="nav-bar">
+            <p id="nome-nav-bar"><?php echo strtoupper($_SESSION['nome']);?></p>
+            <a href="postar.php" class="nav-btn">Postar</a>
+            <p><a class="nav-btn" href="logout.php">Sair</a></p>
+        </div>
     </header>
     <main>
+        <?php
+        while($receber_post = mysqli_fetch_array($query_post)){
+            $post = $receber_post['post_escrito'];
+            $usuario_nome = $receber_post['usuario_nome'];
+        ?>
         <div class="noticia">
-            <h2>Teste</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet suscipit ipsum, et lacinia enim. Curabitur vitae malesuada ante. Suspendisse potenti</p>
+            <h2><?php echo $usuario_nome?></h2>
+            <p><?php echo $post?></p>
         </div>
-        <div class="noticia">
-            <h2>Teste</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet suscipit ipsum, et lacinia enim. Curabitur vitae malesuada ante. Suspendisse potenti</p>
-        </div>
-        <div class="noticia">
-            <h2>Teste</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet suscipit ipsum, et lacinia enim. Curabitur vitae malesuada ante. Suspendisse potenti</p>
-        </div>
-        <div class="noticia">
-            <h2>Teste</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet suscipit ipsum, et lacinia enim. Curabitur vitae malesuada ante. Suspendisse potenti</p>
-        </div>
-        <div class="noticia">
-            <h2>Teste</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet suscipit ipsum, et lacinia enim. Curabitur vitae malesuada ante. Suspendisse potenti</p>
-        </div>
+        <?php
+        };
+        ?>
+            
+        
     </main>
 </body>
 </html>
