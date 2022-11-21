@@ -5,7 +5,18 @@ Esse projeto foi feito como um trabalho da faculdade de analise e desenvolviment
 -JavaScript<br>
 -MySQL(phpMyAdmin)<br>
 -HTML<br>
--CSS
+-CSS<br>
+# Banco de dados
+*Tabela usuarios*:<br>
+id(Pkey, int, autoincrement, notnull)<br>
+email(vachar140,notnull)<br>
+senha(varchar20,notnull)<br>
+nome(varchar100, notnull)<br>
+data_cadastro(datetime)<br><br>
+*Tabela postagem*:<br>
+id(Pkey, int, autoincrement, notnull)<br>
+post_escrito(varchar600, notnull)<br>
+usuario_nome(varchar100, notnull)
 # Hospedagem Utilizada
 <a>https://br.000webhost.com</a>
 # Link do projeto no ar
